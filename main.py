@@ -5,7 +5,7 @@ from art import *
 def create_contact(name, phone_number, is_favorite):
     contact = {
         "Noms": name,
-        "Numeros": phone_number,
+        "phone_number": phone_number,
         "Favori": is_favorite,
               }
     return contact
@@ -13,7 +13,7 @@ def create_contact(name, phone_number, is_favorite):
 carnet = {}
 
 def add_contact(c) :
-        phone_number = c["Numeros"]
+        phone_number = c["phone_number"]
         carnet[phone_number] = c
 
 c = create_contact(name= "Kieran", phone_number="097865434" , is_favorite= True)
@@ -34,16 +34,14 @@ def display_all():
         n = carnet[k]
         print(n)
 
-def get_contact():
-    names = []
-    for k in carnet:
-        
+def get_contact(phone_number):
+    return carnet[phone_number]
 
 
 
 get_names()
 display_all()
-
+print(get_contact("097865434"))
 
 
 
