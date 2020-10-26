@@ -8,4 +8,3 @@ say_hello(n)
 
 h = art("Hello")
 print(h)# affiche hello
-print(text2art("Hello", font = 'block'))
