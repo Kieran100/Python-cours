@@ -29,8 +29,20 @@ def get_names():
         print(n)
     return names
 
-get_names()
+def display_all():
+    for k in carnet:
+        n = carnet[k]
+        print(n)
 
+def get_contact():
+    names = []
+    for k in carnet:
+        
+
+
+
+get_names()
+display_all()
 
 
 
