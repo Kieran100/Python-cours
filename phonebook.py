@@ -68,5 +68,5 @@ def get_contact(phone_number):
         :param phone_number: la clé pour trouver le contact
         :return: le contact
         """
-        l.log_add("Le numeros est attribuer a")
+        l.log_add(f"Le numeros est attribuer a {carnet[phone_number]}")
         return carnet[phone_number]
