@@ -1,47 +1,17 @@
-from art import *
+import phonebook as P
+import logger as l
+import logging
+#import utils  #Import du module
+#from utils import say_hello
 
+P.get_names()
+P.display_all()
+try:
+    print(P.get_contact("064333234"))
+except KeyError as e:
+    print(f'erreur : {e}')
 
-
-def create_contact(name, phone_number, is_favorite):
-    contact = {
-        "Noms": name,
-        "phone_number": phone_number,
-        "Favori": is_favorite,
-              }
-    return contact
-
-carnet = {}
-
-def add_contact(c) :
-        phone_number = c["phone_number"]
-        carnet[phone_number] = c
-
-c = create_contact(name= "Kieran", phone_number="097865434" , is_favorite= True)
-add_contact(c)
-
-c = create_contact( "George", "064333234" ,  False)
-add_contact(c)
-
-def get_names():
-    names = []
-    for k in sorted(carnet):
-        n = carnet[k]["Noms"]
-        print(n)
-    return names
-
-def display_all():
-    for k in carnet:
-        n = carnet[k]
-        print(n)
-
-def get_contact(phone_number):
-    return carnet[phone_number]
-
-
-
-get_names()
-display_all()
-print(get_contact("097865434"))
+l.dump_log()
 
 
 
